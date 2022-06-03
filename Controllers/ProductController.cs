@@ -1,4 +1,5 @@
 ﻿using ProductApp.Models;
+using System;
 using System.Linq;
 using System.Net;
 using System.Web.Mvc;
@@ -12,7 +13,15 @@ namespace ProductApp.Controllers
         // GET: Product
         public ActionResult Index()
         {
-            return View(db.Products.ToList());
+            try
+            {
+                return View(db.Products.ToList());
+            }
+            catch(Exception ex)
+            {
+                ViewBag.AlertMessage = ex.Message;
+                return View();
+            }
         }
 
         // GET: Product/Details/5
