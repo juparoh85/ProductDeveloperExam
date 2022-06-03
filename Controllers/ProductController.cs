@@ -57,8 +57,9 @@ namespace ProductApp.Controllers
 
                 return RedirectToAction("Index");
             }
-            catch
+            catch (Exception ex)
             {
+                throw new Exception(ex.Message);
                 return View();
             }
         }
