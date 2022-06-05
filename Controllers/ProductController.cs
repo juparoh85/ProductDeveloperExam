@@ -134,5 +134,12 @@ namespace ProductApp.Controllers
                 return View();
             }
         }
+
+        // GET: Product/Delete/5
+        [HttpGet]
+        public string getProducts()
+        {
+            return db.Products.ToList().ToString();
+        }
     }
 }
