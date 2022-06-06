@@ -135,7 +135,7 @@ namespace ProductApp.Controllers
             }
         }
 
-        // GET: Product/getProducts
+        // GET: Product/getProducts/{userID}
         [HttpGet]
         public string getProducts()
         {
