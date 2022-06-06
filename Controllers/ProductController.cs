@@ -137,9 +137,9 @@ namespace ProductApp.Controllers
 
         // GET: Product/getProducts/{userID}
         [HttpGet]
-        public string getProducts()
+        public JsonResult getProducts()
         {
-            return db.Products.ToList().ToString();
+            return Json(db.Products.ToList());
         }
     }
 }
