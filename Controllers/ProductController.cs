@@ -135,7 +135,7 @@ namespace ProductApp.Controllers
             }
         }
 
-        // GET: Product/Delete/5
+        // GET: Product/getProducts
         [HttpGet]
         public string getProducts()
         {
